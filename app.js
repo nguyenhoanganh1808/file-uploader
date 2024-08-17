@@ -18,7 +18,7 @@ const foldersRouter = require("./routes/folder");
 const shareRouter = require("./routes/share");
 
 var app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3004;
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
