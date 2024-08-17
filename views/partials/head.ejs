@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/styles.css">
+<style>
+    body {
+        background-color: #f1f3f5;
+        font-family: Arial, sans-serif;
+    }
+
+    .post-content {
+        text-align: justify;
+    }
+
+    .folder-list,
+    .file-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .folder-list li,
+    .file-list li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    .item-name {
+        flex-grow: 1;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .folder-icon a,
+    .file-icon {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    .folder-icon::before {
+        content: "📁";
+        margin-right: 0.5rem;
+    }
+
+    .file-list li::before {
+        content: "📄";
+        margin-right: 0.5rem;
+    }
+
+    .dropdown-menu {
+        min-width: 0;
+        padding: 0.5rem;
+    }
+
+    .authform input[type="file"] {
+        margin-bottom: 1rem;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+
+    .navbar {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .nav-link {
+        margin-right: 15px;
+        color: #555;
+    }
+
+    .nav-link:hover {
+        color: #007bff;
+    }
+
+    .navbar-nav.ml-auto .nav-link {
+        color: #007bff;
+    }
+
+    .navbar-toggler {
+        border-color: rgba(0, 123, 255, 0.25);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 123, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .file-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+
+    .link-container {
+        margin-top: 20px;
+    }
+
+    .share-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        /* max-width: 600px; */
+        overflow-x: auto;
+        font-family: monospace;
+    }
+
+    .copy-btn {
+        margin-left: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .copy-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .success-message {
+        margin-top: 10px;
+        color: green;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .file-details {
+        margin-bottom: 20px;
+    }
+
+    .file-details p {
+        margin: 5px 0;
+    }
+
+    .actions {
+        text-align: center;
+    }
+
+    @media (max-width: 992px) {
+        .nav-link {
+            margin-right: 0;
+        }
+    }
+</style>

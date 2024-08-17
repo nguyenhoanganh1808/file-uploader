@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <form action="/sign-up" method="POST" class="authform">
+                <h1>Sign Up</h1>
+                <label for="firstname">Fisrt name</label>
+                <input name="firstname" placeholder="First name" type="text" />
+                <label for="lastname">Last name</label>
+                <input name="lastname" placeholder="Last name" type="text" />
+                <label for="email">Email</label>
+                <input name="email" placeholder="Email" type="text" />
+                <label for="password">Password</label>
+                <input name="password" type="password" />
+                <label for="confirmpassword">Confirm password</label>
+                <input name="confirmpassword" type="password" />
+
+
+                <%- include("partials/errors.ejs") %>
+                    <input type="submit" value="Signup">
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

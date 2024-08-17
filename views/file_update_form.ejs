@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            </form>
+            <form action="/files/<%= file.id %>/update" method="post" class="authform">
+                <label for="fileName">File name</label>
+                <input value="<%= typeof file != 'undefined' ? file.name : '' %>" name="fileName"
+                    placeholder="File name" type="text" />
+                <%- include("partials/errors.ejs") %>
+
+                    <input type="submit" value="Upload">
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

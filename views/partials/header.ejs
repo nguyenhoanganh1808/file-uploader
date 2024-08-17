@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">File Uploader</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav">
+            <% if (locals.currentUser !==undefined) { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/folders/<%= isRoot ? 'my-drive' : folder.id %>/new">Create
+                        new folder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/files/<%= isRoot ? 'my-drive' : folder.id %>/new">Upload new file</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/log-out">Logout</a>
+                </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/log-in">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sign-up">Register</a>
+                    </li>
+                    <% } %>
+        </ul>
+    </div>
+</nav>

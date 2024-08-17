@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            </form>
+            <form action="/files/<%= isRoot ? 'my-drive' : folder.id %>/new/?isRoot=<%= isRoot %>" method="post"
+                class="authform" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <input type="submit" value="Upload">
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

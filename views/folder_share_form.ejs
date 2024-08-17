@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            </form>
+            <form action="/share/<%= folder.id %>/new" method="post" class="authform">
+                <label for="duration">Duration (in day)</label>
+                <input name="duration" placeholder="1, 2,... day" type="text" />
+                <%- include("partials/errors.ejs") %>
+
+                    <input type="submit" value="Share">
+
+            </form>
+            <% if (typeof shareLink!=='undefined' ) { %>
+                <div class="link-container">
+                    <label for="share-link">Your shareable link:</label>
+                    <p>Remaining time: <%= folder.diff %>
+                    </p>
+                    <div class="share-link">
+                        <input id="share-link" type="text" value="<%= shareLink %>" readonly />
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

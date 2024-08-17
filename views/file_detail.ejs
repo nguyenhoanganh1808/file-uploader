@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="file-container">
+            <h1>File Details</h1>
+            <div class="file-details">
+                <p><strong>Name:</strong>
+                    <%= file.name %>
+                </p>
+                <p><strong>Size:</strong>
+                    <%= file.size %> KB
+                </p>
+                <p><strong>Uploaded At:</strong>
+                    <%= new Date(file.createdAt).toLocaleString() %>
+                </p>
+            </div>
+            <div class="actions">
+                <a href="<%= file.url %>" class="btn btn-primary">Download</a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>
